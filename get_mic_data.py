@@ -17,7 +17,6 @@ def main():
     url_list=[]
     urls=raw_input(u"请输入url地址：")
     result=pq(url=urls)('.cates')#所要抓取的内容所在的类
-    print result
     for item in result:#result是一个列表结构
         li_tag=pq(item)('li')#广告组名称及链接在li标签里面
         for item in li_tag:
